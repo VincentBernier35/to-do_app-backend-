@@ -1,0 +1,3 @@
+- [ ] add 404
+- [ ] router directory
+- [ ] write error checkers in controllers & inside try/catch

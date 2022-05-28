@@ -1,8 +1,6 @@
 const sequelize = require("../database");
 const { Model, DataTypes } = require("sequelize");
 
-
-
 class Task extends Model {}
 
 Task.init({

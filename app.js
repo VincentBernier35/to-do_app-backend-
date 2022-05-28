@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
-const router = require("./app/router");
+const router = require("./app/routers");
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(cors()); // everyone can access the API
 const multipartParser = multer();
 app.use(multipartParser.none());
 
-app.use(router);
+app.use("/api", cors({ origin: "*" }), router);
 
 const port = process.env.PORT;
 app.listen(port, () => {
