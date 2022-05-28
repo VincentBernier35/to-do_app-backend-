@@ -1,9 +1,16 @@
 const sequelize = require("../database");
-const { Model, Sequelize } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
+
+
 
 class Task extends Model {}
+
 Task.init({
-  name: Sequelize.STRING
+  // Model attributes are defined here
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
 }, {
   sequelize,
   timestamps: false,

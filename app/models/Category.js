@@ -1,15 +1,19 @@
-const { sequelize } = require("../database");
-const { Model, Sequelize } = require("sequelize");
+const sequelize = require("../database");
+const { Model, Sequelize, DataTypes } = require("sequelize");
 
 class Category extends Model {}
 
 Category.init({
-  name: Sequelize.STRING,
-  color: Sequelize.STRING
+  name: {
+    type: Sequelize.STRING,
+  },
+  color: {
+    type: DataTypes.TEXT
+  }
+
 }, {
   sequelize,
-  timestamps: false,
   tableName: "tasks"
 });
 
-module.exports = Task;
+module.exports = Category;

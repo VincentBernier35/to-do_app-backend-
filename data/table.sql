@@ -1,8 +1,16 @@
-DROP TABLE IF EXISTS "tasks";
+DROP TABLE IF EXISTS "tasks", "categories";
 
 CREATE TABLE "tasks" (
-  id SERIAL,
-  name TEXT
+  "id" SERIAL,
+  "name" TEXT
 );
 
-INSERT INTO "tasks" (name) VALUES ('database test !');
+CREATE TABLE "categories" (
+  "id" SERIAL,
+  "name" TEXT,
+  "color" TEXT
+);
+
+
+INSERT INTO "tasks" (name) VALUES ('database test saturday!');
+
