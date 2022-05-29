@@ -7,14 +7,12 @@ const taskController = {
   },
   createTask: async function (req, res) {
     const { name } = req.body;
-    // console.log("req =>", req.body);
-    // console.log("nom =>", name);
-
     if(!name) {
       return res.status(404).json({ error: "Please enter a name "});
     }
 
     const task = await Task.create({ name });
+
     res.send(task);
   },
   updateTask: async function (req, res) {

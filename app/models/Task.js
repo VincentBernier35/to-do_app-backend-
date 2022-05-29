@@ -6,8 +6,8 @@ class Task extends Model {}
 Task.init({
   // Model attributes are defined here
   name: {
-    type: DataTypes.STRING,
-    allowNull: false
+    type: DataTypes.TEXT,
+
   }
 }, {
   sequelize,

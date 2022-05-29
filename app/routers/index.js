@@ -4,7 +4,7 @@ const taskRouter = require("./taskRouter");
 
 const mainRouter = new Router();
 
-mainRouter.use(taskRouter);
 mainRouter.use(categoryRouter);
+mainRouter.use(taskRouter);
 
 module.exports = mainRouter;

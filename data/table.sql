@@ -13,4 +13,5 @@ CREATE TABLE "categories" (
 
 
 INSERT INTO "tasks" (name) VALUES ('database test saturday!');
+INSERT INTO "categories" (name) VALUES ('now debug time 3!');
 
