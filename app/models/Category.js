@@ -7,6 +7,9 @@ Category.init({
   name: {
     type: DataTypes.TEXT,
     allowNull: false
+  },
+  color: {
+    type: DataTypes.STRING,
   }
 
 }, {

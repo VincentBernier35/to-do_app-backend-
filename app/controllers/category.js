@@ -9,12 +9,12 @@ const categoryController = {
   },
 
   createCategory: async function (req, res) {
-    const { name } = req.body;
+    const { name, color } = req.body;
     
     if(!name) {
       return res.status(404).json({ error: "Please enter a name "});
     }
-    const category = await Category.create({ name });
+    const category = await Category.create({ name, color });
 
     res.send(category);
   },
@@ -23,9 +23,9 @@ const categoryController = {
     const categoryId = parseInt(req.params.id);
     const category = await Category.findByPk(categoryId);
 
-    const { name } = req.body;
+    const { name, color } = req.body;
 
-    category.set({ name });
+    category.set({ name, color });
     await category.save();
     res.json(category);
   },
